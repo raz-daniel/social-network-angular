@@ -1,0 +1,54 @@
+{
+    "app": {
+        "port": "3000",
+        "name": "Social Network Dev",
+        "secret": "MySecret",
+        "jwtSecret": "MyJwtSecret"
+    },
+    "db": {
+        "host": "localhost",
+        "port": 3306,
+        "username": "root",
+        "password": "",
+        "database": "social_network_db"
+    },
+    "sequelize": {
+        "logging": true,
+        "sync": {
+            "force": false
+        }
+    },
+    "s3": {
+        "bucket": "razdaniel-social-network-angular-mongodb",
+        "isLocalstack": true,
+        "connection": {
+            "region": "us-east-1",
+            "forcePathStyle": true,
+            "credentials": {
+                "accessKeyId": "test",
+                "secretAccessKey": "test"
+            },
+            "endpoint": "http://127.0.0.1:4566"
+        }
+    },
+    "sqs": {
+        "isLocalstack": true,
+        "queueName": "razdaniel-sn-queue",
+        "connection": {
+            "region": "us-east-1",
+            "credentials": {
+                "accessKeyId": "test",
+                "secretAccessKey": "test"
+            },
+            "endpoint": "http://127.0.0.1:4566"
+        }
+    },
+    "io": {
+        "url": "ws://127.0.0.1:3003"
+    },
+    "mongoose": {
+        "host": "127.0.0.1",
+        "port": 27017,
+        "database": "social_network_db"
+    }
+}
